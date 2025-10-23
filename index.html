@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amar Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            /* Soft light gray */
+            color: #000;
+            overflow-x: hidden;
+        }
+
+
+
+        /* ====== NAVBAR ====== */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #f6f6f6;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        nav:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .logo h1:hover {
+            color: #7c5cff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #7c5cff;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #7c5cff;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ====== HOME ====== */
+        section {
+            padding: 100px 60px;
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            min-height: 90vh;
+        }
+
+        .home-left {
+            flex: 1;
+            min-width: 300px;
+            animation: fadeInLeft 1s ease forwards;
+            opacity: 0;
+        }
+
+        .home-left h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .home-left p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .home-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+            animation: fadeInRight 1s ease forwards;
+            opacity: 0;
+        }
+
+        .home-right .home-img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .home-right .home-img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-img {
+            width: 250px;
+            /* image ka size */
+            height: 250px;
+            /* image ka size */
+            border-radius: 50%;
+            /* circle shape */
+            object-fit: cover;
+            /* image properly fit ho circle me */
+            border: 5px solid #7c5cff;
+            /* optional border */
+        }
+
+
+        /* ====== SERVICES ====== */
+        #services {
+            background: #fafafa;
+            text-align: center;
+        }
+
+        #services h2 {
+            .home-right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .home-img {
+                width: 250px;
+                /* image ka size */
+                height: 250px;
+                /* image ka size */
+                border-radius: 50%;
+                /* circle shape */
+                object-fit: cover;
+                /* image properly fit ho circle me */
+                border: 5px solid #7c5cff;
+                /* optional border */
+            }
+
+            margin-bottom: 20px;
+            color: #7c5cff;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .service-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .service-content p {
+            margin: 10px 0;
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        .service-content ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .service-content li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .service-content li:hover {
+            transform: translateX(5px);
+            color: #7c5cff;
+        }
+
+        /* ====== PRODUCTS ====== */
+        #products {
+            text-align: center;
+            background: #fff;
+        }
+
+        #products h2 {
+            color: #7c5cff;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #fff;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card .image {
+            width: 100%;
+            height: 180px;
+            border: 1px solid #aaa;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .product-card .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card p {
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+        /* ====== ABOUT / FOOTER ====== */
+        #about {
+            text-align: center;
+            background: #fafafa;
+        }
+
+        #about h2 {
+            color: #7c5cff;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #f6f6f6;
+            text-align: center;
+            padding: 25px 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .footer-social {
+            margin-top: 8px;
+        }
+
+        .footer-social span {
+            margin: 0 5px;
+            font-size: 20px;
+        }
+
+        /* ====== RESPONSIVE ====== */
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 25px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+            }
+
+            .menu-toggle span {
+                width: 25px;
+                height: 3px;
+                background: #000;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-right {
+                margin-top: 25px;
+            }
+
+            section {
+                padding: 80px 25px;
+            }
+        }
+
+        /* ====== ANIMATIONS ====== */
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav>
+        <div class="logo">
+            <img src="image/Gemini_Generated_Image_cly8khcly8khcly8.png" alt="Amar">
+            <h1>AMAR</h1>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- ====== HOME ====== -->
+    <section id="home">
+        <div class="home-left">
+            <h2>AMAR GUPTA</h2>
+            <p>HELLO, I'M AMAR - CREATIVE WEB DESIGNER DESIGNING CREATIVE & RESPONSIVE WEBSITE THAT HELP BUSINESS CONVER MORE VISITORS</p>
+            <p>I BUILD FAST,RESPONSIVE WEBSITES WITH ATTENTION TO UX AND PERFORMANCE.</p>
+            <p><b>PHONE:</b> 9608874159</p>
+            <p><b>ADDRESS:</b> JALIMA CHOUK, KANCHANPUR, LUPUNG ROAD</p>
+            <p><b>EMAIL:</b> amarkumar50105@gmail.com</p>
+        </div>
+        <div class="home-right">
+            <div class="home-right">
+                <img src="image/IMG_20230602_152330.jpg" alt="Profile Image" class="home-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section id="services">
+        <h2>SERVICES</h2>
+        <div class="service-content">
+            <p>अपने व्यवसाय के लिए एक वेबसाइट बनवाइए...</p>
+            <ul>
+                <li>हमारी दुकान में आपको high quality products मिलेंगे।</li>
+                <li>Our products last for a long time.</li>
+                <li>यहाँ आपको अच्छे दाम पर बेहतरीन क्वालिटी मिलेगी।</li>
+                <li>We work hard for your satisfaction.</li>
+            </ul>
+            <h3 style="margin-top:25px;">Website की जरूरत क्यों है और इससे क्या फायदा होता है:</h3>
+            <ul>
+                <li>1️⃣ ऑनलाइन पहचान — Helps shop owners create an online identity.</li>
+                <li>2️⃣ ग्राहक तक पहुँचना — Customers can easily find your shop.</li>
+                <li>3️⃣ प्रोडक्ट्स या सर्विस दिखाना — Showcase your products/services.</li>
+                <li>4️⃣ ग्राहक से संपर्क — Customers can contact directly.</li>
+                <li>5️⃣ भरोसा और प्रोफेशनल लुक — Builds trust and impression.</li>
+                <li>6️⃣ जानकारी और अपडेट्स — Share info and offers easily.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====== PRODUCTS ====== -->
+    <section id="products">
+        <h2>PRODUCT DETAILS</h2>
+        <div class="product-grid">
+
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>High quality product with perfect design and durability.</p>
+            </div>
+
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Excellent product for all modern users with sleek design.</p>
+            </div>
+
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Strong performance and great finishing for long-term use.</p>
+            </div>
+
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+            
+            <div class="product-card">
+                <div class="image">IMAGE</div>
+                <p><b>PRICE = 10,000</b></p>
+                <p>Affordable price and high satisfaction from customers.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ====== ABOUT / FOOTER ====== -->
+    <section id="about">
+        <h2>ABOUT</h2>
+        <p>✨ Thank you for visiting my website! Your support means a lot — come back soon for more updates! 🙏💫</p>
+        <p><b>CONTACT:</b></p>
+        <p>PHONE NO: 9608874159</p>
+        <p>ADDRESS: JALIMA CHOUK, KANCHANPUR, LUPUNG ROAD</p>
+        <p>EMAIL: amarkumar50105@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Created by Amar ❤️</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // Animate elements when scrolling
+        const animateElements = document.querySelectorAll('.home-left, .home-right, .service-content p, #services h2');
+        window.addEventListener('scroll', () => {
+            animateElements.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (top < windowHeight - 50) {
+                    el.style.opacity = 1;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
