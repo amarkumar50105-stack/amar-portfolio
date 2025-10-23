@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,6 +20,7 @@
             /* Soft light gray */
             color: #000;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
         }
 
 
@@ -264,6 +266,8 @@
             padding: 15px;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             background: #fff;
+            width: 300px;
+            /* optional: adjust card width */
         }
 
         .product-card:hover {
@@ -280,10 +284,18 @@
             justify-content: center;
             align-items: center;
             font-size: 14px;
+            overflow: hidden;
+            /* ensure image doesn't overflow */
+        }
+
+        .product-card .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.5s, box-shadow 0.5s;
         }
 
-        .product-card .image:hover {
+        .product-card .image img:hover {
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
@@ -460,7 +472,8 @@
     <section id="home">
         <div class="home-left">
             <h2>AMAR GUPTA</h2>
-            <p>HELLO, I'M AMAR - CREATIVE WEB DESIGNER DESIGNING CREATIVE & RESPONSIVE WEBSITE THAT HELP BUSINESS CONVER MORE VISITORS</p>
+            <p>HELLO, I'M AMAR - CREATIVE WEB DESIGNER DESIGNING CREATIVE & RESPONSIVE WEBSITE THAT HELP BUSINESS CONVER
+                MORE VISITORS</p>
             <p>I BUILD FAST,RESPONSIVE WEBSITES WITH ATTENTION TO UX AND PERFORMANCE.</p>
             <p><b>PHONE:</b> 9608874159</p>
             <p><b>ADDRESS:</b> JALIMA CHOUK, KANCHANPUR, LUPUNG ROAD</p>
@@ -478,22 +491,49 @@
     <section id="services">
         <h2>SERVICES</h2>
         <div class="service-content">
-            <p>अपने व्यवसाय के लिए एक वेबसाइट बनवाइए...</p>
+            <p>अगर आप अपने वर्कशॉप के लिए एक वेबसाइट बनवाते हैं तो आपकी वेबसाइट में कुछ ऐसे फीचर दिए जाएंगे। आप चाहें तो
+                इसे कस्टमाइज़ भी करवा सकते हैं।</p>
             <ul>
-                <li>हमारी दुकान में आपको high quality products मिलेंगे।</li>
-                <li>Our products last for a long time.</li>
-                <li>यहाँ आपको अच्छे दाम पर बेहतरीन क्वालिटी मिलेगी।</li>
-                <li>We work hard for your satisfaction.</li>
+                <li>हमारी दुकान में आपको high quality products मिलेंगे। In our shop, you will find high quality
+                    products.</li>
+                <li>हम जो भी सामान बेचते हैं, उसकी गुणवत्ता सर्वोत्तम होती है। The quality of everything we sell is
+                    top-notch.</li>
+                <li>हमारे उत्पाद लम्बे समय तक टिकते हैं। Our products last for a long time.</li>
+                <li>यहाँ आपको उचित दामों पर बेहतरीन वस्तुएं मिलेंगी। Here you will get excellent items at reasonable
+                    prices.</li>
+                <li>हमारे ग्राहक हमारे सेवा और व्यवहार से बहुत खुश हैं। Our customers are very happy with our service
+                    and behavior.</li>
+                <li>आप हमें कभी भी संपर्क कर सकते हैं, हम आपकी सहायता के लिए हमेशा तैयार हैं। You can contact us
+                    anytime, we are always ready to help you.</li>
+                <li>हमारे प्रोडक्ट के बारे में पूरी जानकारी वेबसाइट पर उपलब्ध है। complete information about our
+                    products is available on the website.</li>
+                <li>दुकान का स्थान आपके लिए आसानी से पहुंचने योग्य है। The shop location is easily accessible for you.
+                </li>
+                <li>हम आपकी संतुष्टि के लिए कड़ी मेहनत करते हैं। We work hard for your satisfaction.</li>
             </ul>
-            <h3 style="margin-top:25px;">Website की जरूरत क्यों है और इससे क्या फायदा होता है:</h3>
+            <h3 style="margin-top:25px;">website ki jarurat kyu hai aur isse kya fayda hota hai</h3>
             <ul>
-                <li>1️⃣ ऑनलाइन पहचान — Helps shop owners create an online identity.</li>
-                <li>2️⃣ ग्राहक तक पहुँचना — Customers can easily find your shop.</li>
-                <li>3️⃣ प्रोडक्ट्स या सर्विस दिखाना — Showcase your products/services.</li>
-                <li>4️⃣ ग्राहक से संपर्क — Customers can contact directly.</li>
-                <li>5️⃣ भरोसा और प्रोफेशनल लुक — Builds trust and impression.</li>
-                <li>6️⃣ जानकारी और अपडेट्स — Share info and offers easily.</li>
+                <li>1. ऑनलाइन पहचान - It helps the shop owner create a professionalonline identity. वेबसाइट से दुकानदार
+                    की एक प्रोफेशनल पहचान बनती है।</li>
+                <li>2. ग्राहकों तक पहुंच - Customers can easily find the shop through Google or social media links.
+                    वेबसाइट से लोग Google या सोशल मीडिया के जरिए दुकान तक आसानीसे पहुंच सकते हैं।</li>
+                <li>3. प्रोडक्ट या सर्विस दिखाना - The owner can showcase products or services with images and
+                    descriptions. वेबसाइट पर दुकानदार अपने प्रोडक्ट्स या सर्विसेज की फोटोज़ और डिटेल्स दिखा सकता है।
+                </li>
+                <li>4. ग्राहकों से संपर्क - Customers can contact directly through a form or WhatsApp link on the
+                    website. वेबसाइट में Contact Form या WhatsApp लिंक से ग्राहक सीधे जुड़ सकते हैं।</li>
+                <li>5. भरोसा और प्रोफेशनल लुक -A well-designed website builds trust and gives a professional impression.
+                    एक सुंदर वेबसाइट से ग्राहकों का भरोसा बढ़ता है और दुकान को प्रोफेशनल लुक मिलता है।</li>
+                <li>6. लोकेशन और टाइमिंग दिखाना - Showing the shop's location and timings helps customers reach easily.
+                    timings helps customers reach easily. Google Map और टाइमिंग दिखाकर ग्राहक को दुकान ढूंढने में आसानी
+                    होती है।</li>
+                <li>7. ग्राहक रिव्यू दिखाना - Displaying reviews builds credibility among new customers. वेबसाइट पर
+                    रिव्यू दिखाने से नए ग्राहकों को भरोसा मिलता है।</li>
+                <li>8.मार्केटिंग में मदद - The site can be linked with Facebook, youtube , instagram etc</li>
             </ul>
+
+
+
         </div>
     </section>
 
@@ -504,69 +544,119 @@
 
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>High quality product with perfect design and durability.</p>
+                <div class="image">
+                    <img src="image/tech.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 30,000</b></p>
+                <p>Create websites for tech companies or products with interactive demos, documentation, and modern UI.
+                </p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">
+                    <img src="image/business.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 25,000</b></p>
+                <p>Create a responsive business website that highlights your services, team, and brand to attract
+                    clients.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">
+                    <img src="image/E-commerce.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 50,000</b></p>
+                <p>Build an online store with secure payments, product catalogs, and a smooth shopping experience for
+                    customers.</p>
             </div>
 
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
+                <div class="image">
+                    <img src="image/portfolio.webp" alt="Product" />
+                </div>
                 <p><b>PRICE = 10,000</b></p>
-                <p>Excellent product for all modern users with sleek design.</p>
+                <p>Showcase your work and projects in a sleek, professional online portfolio to impress clients and
+                    employers.</p>
             </div>
 
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Strong performance and great finishing for long-term use.</p>
+                <div class="image">
+                    <img src="image/blog.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 35,000</b></p>
+                <p>Share your thoughts, tutorials, and stories with a modern blog platform that is easy to manage and
+                    update.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">
+                    <img src="image/E-commerce.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 50,000</b></p>
+                <p>Build an online store with secure payments, product catalogs, and a smooth shopping experience for
+                    customers.</p>
+            </div>
+
+            <div class="product-card">
+                <div class="image">
+                    <img src="image/landing.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 40,000</b></p>
+                <p>Create high-converting landing pages for promotions, products, or campaigns with a clean and engaging
+                    design.</p>
             </div>
 
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
+                <div class="image">
+                    <img src="image/social-media.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 90,000</b></p>
+                <p>Develop interactive platforms for communities to connect, share content, and grow online engagement.
+                </p>
             </div>
+
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
+                <div class="image">
+                    <img src="image/startup.jpg" alt="Product" />
+                </div>
                 <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
+                <p>Showcase your startup idea with professional design, key features, team, and investor-ready content.
+                </p>
             </div>
+
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
+                <div class="image">
+                    <img src="image/tech.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 30,000</b></p>
+                <p>Create websites for tech companies or products with interactive demos, documentation, and modern UI.
+                </p>
             </div>
+
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
+                <div class="image">
+                    <img src="image/education.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 60,000</b></p>
+                <p>Build learning platforms, course websites, or educational portals for students and teachers online.
+                </p>
             </div>
+
 
             <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
+                <div class="image">
+                    <img src="image/createive-agency.jpg" alt="Product" />
+                </div>
+                <p><b>PRICE = 10,0000</b></p>
+                <p>Design visually stunning websites for creative agencies showcasing projects, services, and case
+                    studies.</p>
             </div>
-
-            <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
-            </div>
-            
-            <div class="product-card">
-                <div class="image">IMAGE</div>
-                <p><b>PRICE = 10,000</b></p>
-                <p>Affordable price and high satisfaction from customers.</p>
-            </div>
-
-
         </div>
     </section>
 
